@@ -5,7 +5,7 @@ from pathlib import Path
 
 path_logs = Path("src/logs")
 path_logs.mkdir(parents=True, exist_ok=True)
-datetime_now = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
+datetime_now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 file_path = path_logs / f"execution_{datetime_now}.log"
 
 logging.basicConfig(
