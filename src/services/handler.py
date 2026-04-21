@@ -35,13 +35,13 @@ class Handler:
                     continue
                 
                 extracted = {
-                    'first_name': row[0],
-                    'last_name': row[1],
-                    'company_name': row[2],
-                    'role_in_company': row[3],
-                    'address': row[4],
-                    'email': row[5],
-                    'phone_number': row[6]
+                    'first_name': str(row[0]),
+                    'last_name': str(row[1]),
+                    'company_name': str(row[2]),
+                    'role_in_company': str(row[3]),
+                    'address': str(row[4]),
+                    'email': str(row[5]),
+                    'phone_number': str(row[6])
                 }
 
                 data.append(extracted)
