@@ -17,13 +17,13 @@ class Consumer:
         self.folder_screenshot = Path("src/screenshots")
     
     def fill_out_the_web_form(self):
-        self.logger.info("Iniciando a automação web para preenchimento do formulário.")
-
         try:
             people = self.handler.read_file()
             if not people:
                 self.logger.warning('Não foram encontrados dados para serem processados.')
                 return
+
+            self.logger.info("Iniciando preenchimento do formulário.")
 
             with sync_playwright() as p:
                 browser = p.chromium.launch(headless=False) 
@@ -58,7 +58,7 @@ class Consumer:
                 page.screenshot(path=path_screenshot, full_page=True)
 
                 self.logger.info(f"Screenshot salvo com sucesso em: {path_screenshot}")
-                self.logger.info("Automação finalizada.")
+                self.logger.info("Preenchimento do formulário finalizado.")
                 browser.close()
 
         except Exception as e:
