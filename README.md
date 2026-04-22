@@ -36,7 +36,7 @@ nava_rpa_challenge/
 Como clonar o projeto:
 
 ```bash
-git clone https://github.com/lucas-ioliveira/corpsystem_test.git
+git clone https://github.com/lucas-ioliveira/nava_rpa_challenge.git
 ```
 
 <br>
